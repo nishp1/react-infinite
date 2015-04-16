@@ -59,6 +59,11 @@ describe("Array Infinite Computer", () => {
       expect(aic.getDisplayIndexEnd(444)).toEqual(4);
     });
 
+    it("computes the correct end index when all items fit within the container", () => {
+      var aic = new ArrayInfiniteComputer([28], 1);
+      expect(aic.getDisplayIndexEnd(627)).toEqual(1);
+    });
+
     xit("computes indexes correctly with zero-height elements", () => {
     });
   });

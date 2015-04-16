@@ -24,7 +24,8 @@ class ArrayInfiniteComputer extends InfiniteComputer {
   }
 
   getDisplayIndexEnd(windowBottom) {
-    return bs.binaryIndexSearch(this.prefixHeightData, windowBottom, bs.opts.CLOSEST_HIGHER) + 1;
+    var foundIndex = bs.binaryIndexSearch(this.prefixHeightData, windowBottom, bs.opts.CLOSEST_HIGHER);
+    return typeof foundIndex === 'undefined' ? 1 : foundIndex + 1; 
   }
 
   getTopSpacerHeight(displayIndexStart) {
