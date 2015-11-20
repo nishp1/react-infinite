@@ -22,9 +22,12 @@
   "browser": "src/react-infinite.jsx",
   "browserify": {
     "transform": [
-      ["reactify", {
-        "es6": true
-      }]
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
     ]
   },
   "scripts": {
@@ -64,10 +67,11 @@
     "coveralls": "^2.11.2"
   },
   "dependencies": {
+    "browserify-shim": "^3.8.11",
     "lodash.isarray": "^3.0.0",
     "lodash.isfinite": "^3.0.0"
   },
-  "peerDependencies":{
+  "peerDependencies": {
     "react": ">= 0.13.2"
   }
 }
