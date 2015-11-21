@@ -144,14 +144,14 @@ var Infinite = React.createClass({
     var that = this;
 
     this.setState({
-      scrollableHeight: this.refs.scrollable.getDOMNode().clientHeight,
+      scrollableHeight: this.refs.scrollable.clientHeight,
       currentScrollTop: this.getScrollTop(),
       previousScrollTop: this.getScrollTop()
     });
   },
 
   getScrollTop() {
-    return this.refs.scrollable.getDOMNode().scrollTop;
+    return this.refs.scrollable.scrollTop;
   },
 
   isScrollingDown() {
@@ -179,7 +179,7 @@ var Infinite = React.createClass({
   },
 
   infiniteHandleScroll(e) {
-    this.props.handleScroll(this.refs.scrollable.getDOMNode());
+    this.props.handleScroll(this.refs.scrollable);
     this.handleScroll(e.target.scrollTop);
   },
 
